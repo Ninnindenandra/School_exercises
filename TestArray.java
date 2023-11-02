@@ -10,6 +10,7 @@ public class TestArray {
 
     @Test
     public void testCountLines() {
+        //test counting number of lines
         //Arrange
         String myLine = "Jag skriver 4 ord.";
         int expected = 4;
@@ -23,12 +24,13 @@ public class TestArray {
 
         //Assert
         assertEquals(expected, actual);
-
-
     }
+
 
     @Test
     public void testCountCharacters() {
+        //Test correct counting of characters, blanks excluded, when writing more than one line.
+
         //Arrange
         String myLine = "Nu skriver jag";
         int expected = 48;
@@ -47,12 +49,14 @@ public class TestArray {
 
     @Test
     public void testCountWords() {
+        //test counting of words on two lines
         //Arrange
         String myLine = "Jag skriver 4 ord.";
-        int expected = 4;
+        int expected = 8;
         ReadArrayLogic array = new ReadArrayLogic();
 
         //Act
+        array.CountWords(myLine);
         array.CountWords(myLine);
         int actual = ReadArrayLogic.numberOfWords;
 

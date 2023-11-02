@@ -43,6 +43,6 @@ public class ReadArrayLogic {
     public void CountWords(String myLine) {
         String[] tempArray = myLine.split(" ");
 
-        numberOfWords = tempArray.length;
+        numberOfWords += tempArray.length;
     }
 }
