@@ -66,4 +66,26 @@ public class TestArray {
 
 
     }
+    @Test
+    public void testLongestWord() {
+        //test counting of words on two lines
+        //Arrange
+        //String myLine = "Jag skriver 4 jätttelånga  ord.";
+        String expected = "skriver";
+        ReadArrayLogic array = new ReadArrayLogic();
+
+        //Act
+        //array.CountWords(myLine);
+        String myLine = "Jag skriver 4 ord.";
+        array.CountWords(myLine);
+        myLine = "Jag skrev 4 ord.";
+        array.CountWords(myLine);
+        String actual = ReadArrayLogic.longestWord;
+
+        //Assert
+
+        assertEquals(expected, actual);
+
+
+    }
 }

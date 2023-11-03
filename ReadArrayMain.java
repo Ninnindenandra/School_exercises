@@ -32,9 +32,10 @@ public class ReadArrayMain {
 
         }
 
-        System.out.println("Antal rader " + ReadArrayLogic.numberOfRows);
-        System.out.println("Antal ord " + ReadArrayLogic.numberOfWords);
-        System.out.println("Antal tecken " + ReadArrayLogic.numberOfCharacters);
+        System.out.println("Antal rader: " + ReadArrayLogic.numberOfRows);
+        System.out.println("Antal tecken, mellanslag ej räknade: " + ReadArrayLogic.numberOfCharacters);
+        System.out.println("Antal ord: " + ReadArrayLogic.numberOfWords);
+        System.out.println("Det längsta ordet är: " + ReadArrayLogic.longestWord);
     }
 
 

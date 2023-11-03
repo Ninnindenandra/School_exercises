@@ -6,6 +6,8 @@ public class ReadArrayLogic {
     public static int numberOfCharacters = 0;
     public static int numberOfWords = 0;
 
+    public static String longestWord = "";
+
     //constructor
     public ReadArrayLogic() {
 
@@ -44,5 +46,18 @@ public class ReadArrayLogic {
         String[] tempArray = myLine.split(" ");
 
         numberOfWords += tempArray.length;
+        //comparing lenght of the words
+
+        String tempWord = "";
+
+
+        for (int i = 0; i < tempArray.length; i++) {
+            tempWord = tempArray[i];
+            if (longestWord.length() < tempWord.length()){
+                longestWord = tempWord;
+            }
+
+        }
+
     }
 }
