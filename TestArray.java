@@ -12,7 +12,7 @@ public class TestArray {
     public void testCountLines() {
         //test counting number of lines
         //Arrange
-        String myLine = "Jag skriver 4 ord.";
+        String myLine = "Jag skriver.";
         int expected = 4;
         ReadArrayLogic array = new ReadArrayLogic();
 
