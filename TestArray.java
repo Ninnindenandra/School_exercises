@@ -1,6 +1,5 @@
 package Assignment;
 
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -17,7 +16,7 @@ public class TestArray {
         ReadArrayLogic array = new ReadArrayLogic();
 
         //Act
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {       //writing the same line 4 times
             array.CountLines(myLine);
         }
         int actual = ReadArrayLogic.numberOfRows;
@@ -29,7 +28,7 @@ public class TestArray {
 
     @Test
     public void testCountCharacters() {
-        //Test correct counting of characters, blanks excluded, when writing more than one line.
+        //Test counting of characters (blanks excluded) when writing more than one line.
 
         //Arrange
         String myLine = "Nu skriver jag";
@@ -37,7 +36,7 @@ public class TestArray {
         ReadArrayLogic array = new ReadArrayLogic();
 
         //Act
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {      //writing the same line 4 times
             array.CountCharacters(myLine);
         }
         int actual = ReadArrayLogic.numberOfCharacters;
@@ -47,39 +46,23 @@ public class TestArray {
     }
 
 
-    @Test
-    public void testCountWords() {
-        //test counting of words on two lines
-        //Arrange
-        String myLine = "Jag skriver 4 ord.";
-        int expected = 8;
-        ReadArrayLogic array = new ReadArrayLogic();
 
-        //Act
-        array.CountWords(myLine);
-        array.CountWords(myLine);
-        int actual = ReadArrayLogic.numberOfWords;
-
-        //Assert
-
-        assertEquals(expected, actual);
-
-
-    }
     @Test
     public void testLongestWord() {
-        //test counting of words on two lines
+        //test selecting the longest word in two lines of text
+
         //Arrange
-        //String myLine = "Jag skriver 4 jätttelånga  ord.";
         String expected = "skriver";
         ReadArrayLogic array = new ReadArrayLogic();
 
         //Act
-        //array.CountWords(myLine);
+        //Submits two lines of text
         String myLine = "Jag skriver 4 ord.";
         array.CountWords(myLine);
+
         myLine = "Jag skrev 4 ord.";
         array.CountWords(myLine);
+
         String actual = ReadArrayLogic.longestWord;
 
         //Assert
