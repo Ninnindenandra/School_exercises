@@ -5,7 +5,6 @@ public class ReadArrayLogic {
     public static int numberOfRows = 0;
     public static int numberOfCharacters = 0;
     public static int numberOfWords = 0;
-
     public static String longestWord = "";
 
     //constructor
@@ -41,15 +40,14 @@ public class ReadArrayLogic {
         }
     }
 
-    //Delar upp en rad text i ord
+    //Divides text into words and count them
     public void CountWords(String myLine) {
+
         String[] tempArray = myLine.split(" ");
-
         numberOfWords += tempArray.length;
-        //comparing lenght of the words
 
+        //comparing length of the words
         String tempWord = "";
-
 
         for (int i = 0; i < tempArray.length; i++) {
             tempWord = tempArray[i];
